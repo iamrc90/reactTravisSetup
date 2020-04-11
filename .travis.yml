@@ -10,8 +10,7 @@ branches:
   - master
 deploy:
   provider: heroku
-  api_key:
-    secure: "$HEROKU_KEY"
+  api_key: $HEROKU_KEY
   app: loopback-connector-provider-reactapp
   on:
     branch: master
