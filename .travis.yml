@@ -11,6 +11,6 @@ branches:
 deploy:
   provider: heroku
   api_key: $HEROKU_KEY
-  app: loopback-connector-provider-reactapp
+  app: loopback-connector-provider-re
   on:
     branch: master
