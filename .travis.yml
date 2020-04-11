@@ -5,7 +5,7 @@ before_install:
   - docker build -t ripulchhabra/docker-react-test -f Dockerfile.dev .
   - docker build -t ripulchhabra/docker-react .
 script:
-  - docker run -e CI=true ripulchhabra/docker-react npm run test
+  - docker run -e CI=true ripulchhabra/docker-react-test npm run test
 branches:
   only:
   - master
