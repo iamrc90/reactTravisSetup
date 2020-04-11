@@ -1,0 +1,17 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t ripulchhabra/docker-react -f Dockerfile.dev .
+script:
+  - docker run -e CI=true ripulchhabra/docker-react npm run test
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: "$HEROKU_KEY"
+  app: loopback-connector-provider-reactapp
+  on:
+    branch: master
